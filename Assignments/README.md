@@ -14,6 +14,8 @@
 
 ## Lab Assignments
 
+---
+
 **Experiment - 1**
 
 Design and simulate a simple computer network using various connection topologies (bus, star, ring, mesh). Compare the advantages and disadvantages of each topology in terms of data flow and network efficiency.
