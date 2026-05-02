@@ -16,242 +16,246 @@
 
 ---
 
-**Experiment - 1**
+### **Experiment - 1: Network Topologies**
 
-Design and simulate a simple computer network using various connection topologies (bus, star, ring, mesh). Compare the advantages and disadvantages of each topology in terms of data flow and network efficiency.
+Design and simulate bus, star, ring, mesh, and hybrid topologies.
 
-BUS TOPOLOGY 
-
-Steps:
-1. Open Cisco Packet Tracer
-2. Drag 4–5 PCs
-3. Drag 1 Hub
-4. Connect all PCs to the hub using Copper Straight-through cables
-5. Assign IP addresses:
-PC1 → 192.168.1.1
-PC2 → 192.168.1.2
-PC3 → 192.168.1.3
-6. Use Add Simple PDU (envelope icon) to send packets
-7. Observe packet flow (shared medium behavior)
-
-STAR TOPOLOGY
+#### **BUS TOPOLOGY**
 
 Steps:
-1. Place 1 Switch
-2. Add 4–6 PCs
-3. Connect each PC to the switch using Straight-through cable
-4. Assign IPs (same network):
-192.168.2.x
-5. Send PDU between PCs
-6. Observe: communication via central switch
+1. Open Cisco Packet Tracer  
+2. Drag 4–5 PCs  
+3. Add 1 Hub  
+4. Connect all PCs to hub using straight-through cable  
+5. Assign IPs (192.168.1.x)  
+6. Send PDU  
+7. Observe shared communication  
 
-RING TOPOLOGY
-
-Steps:
-1. Packet Tracer does not directly support ring via a single device, so simulate manually:
-2. Place 4 PCs
-Connect:
-PC1 → PC2
-PC2 → PC3
-PC3 → PC4
-PC4 → PC1
-3. Use Cross-over cables
-4. Assign IPs (same network: 192.168.3.x)
-5. Send PDU and observe circular path
-
-MESH TOPOLOGY
+#### **STAR TOPOLOGY**
 
 Steps:
-1. Place 4 PCs
-2. Connect each PC to every other PC
-3. Use Cross-over cables
-4. Assign IPs:
-192.168.4.x
-5. Send PDU
-6. Observe multiple paths for data
+1. Add 1 Switch  
+2. Add PCs  
+3. Connect each PC to switch  
+4. Assign IPs  
+5. Send PDU  
+6. Observe centralized communication  
 
-HYBRID TOPOLOGY
+#### **RING TOPOLOGY**
 
 Steps:
-1. Add 2 Switches + 1 Hub + PCs
-2. PCs → Switches (Star)
-3. Switches → Hub (Bus backbone)
-4. Test → observe combined behavior
+1. Add 4 PCs  
+2. Connect PC1→PC2→PC3→PC4→PC1  
+3. Use cross cables  
+4. Assign IPs  
+5. Send PDU  
+6. Observe circular data flow  
 
-**Experiment - 2**
+#### **MESH TOPOLOGY**
 
-Create a network simulation to demonstrate packet switching and circuit switching. Compare the performance and efficiency of both methods by simulating a series of data transmission scenarios.
+Steps:
+1. Add 4 PCs  
+2. Connect each PC to every other PC  
+3. Assign IPs  
+4. Send PDU  
+5. Observe multiple paths  
 
-What is Circuit Switching?
+#### **HYBRID TOPOLOGY**
 
-Circuit switching is a method where a dedicated path is established between sender and receiver before data transmission.
+Steps:
+1. Add switches + hub  
+2. Connect star + bus  
+3. Assign IPs  
+4. Send PDU  
+5. Observe combined behavior  
 
-Steps:-
+---
 
-1. Create a network with two PCs connected through routers via a single path.
-2. Connect devices using appropriate cables.
-3. Assign IP addresses to PCs and router interfaces.
-4. Enable router interfaces using no shutdown.
-5. Configure static routing to establish a fixed path.
-6. Send data using ping from source to destination.
-7. Observe that all packets follow the same path.
-8. Note that the path remains reserved during communication.
-9. Verify successful data transmission.
-10. Conclude that communication uses a dedicated path.
+### **Experiment - 2: Packet & Circuit Switching**
 
-What is Packet Switching?
+#### **Circuit Switching**
 
-Packet switching is a method where data is divided into small packets and sent through different paths in a network to reach the destination.
+Steps:
+1. Create network with routers  
+2. Assign IP addresses  
+3. Configure router interfaces  
+4. Enable using `no shutdown`  
+5. Configure static routing  
+6. Send ping  
+7. Observe fixed path  
+8. Note dedicated channel  
 
-Steps:-
+#### **Packet Switching**
 
-1. Create a network with multiple PCs connected through a switch.
-2. Connect all PCs to the switch using straight-through cables.
-3. Assign IP addresses to all PCs in the same network.
-4. Switch to Simulation Mode.
-5. Send a PDU from one PC to another.
-6. Observe packets being divided and transmitted across the network.
-7. Track packet movement through the switch.
-8. Verify successful packet delivery at destination.
-9. Repeat for different PCs to observe communication.
-10. Conclude that data is transmitted in the form of packets.
+Steps:
+1. Create network using switch  
+2. Connect PCs  
+3. Assign IPs  
+4. Use simulation mode  
+5. Send PDU  
+6. Observe packet movement  
+7. Verify delivery  
 
-**Experiment - 3**
+---
 
-Develop a network simulator to analyze packet delay, loss, and end-to-end throughput. Implement various routing algorithms and measure their impact on network performance under different traffic conditions.
+### **Experiment - 3: Packet Delay, Loss & Throughput**
 
-Steps:- 
+Steps:
+1. Create network with PCs and switch  
+2. Assign IP addresses  
+3. Verify connectivity using ping  
+4. Start continuous ping  
+5. Disconnect cable  
+6. Observe packet loss  
+7. Reconnect cable  
+8. Observe recovery  
+9. Analyze delay  
+10. Record results  
 
-1. Create a network with two PCs connected via a switch.
-2. Assign IP addresses in the same network.
-3. Ping between PCs to verify connectivity.
-4. Start continuous ping.
-5. Disconnect cable to simulate link failure.
-6. Observe packet loss and timeout.
-7. Reconnect cable to restore link.
-8. Observe recovery of communication.
-9. Record failure and recovery behavior.
-10. Conclude impact of link errors.
+---
 
-**Experiment - 6**
+### **Experiment - 4: Error Detection & Correction (CRC & Block Coding)**
 
-Develop a simulation to demonstrate multiple access protocols such as Pure ALOHA, Slotted ALOHA, CSMA/CD, and CSMA/CA. Analyze the performance of each protocol in handling network collisions and maximizing data transmission efficiency.
+Steps:
+1. Create network with 2 PCs and switch  
+2. Assign IP addresses  
+3. Send data using PDU  
+4. Add note explaining block coding  
+5. Simulate parity bits  
+6. Introduce error (disconnect link)  
+7. Observe error detection  
+8. Explain CRC mechanism  
+9. Verify retransmission  
+10. Analyze results  
 
-CSMA/CA is a network protocol used in wireless networks (Wi-Fi) to avoid collisions before they happen.
+---
 
-Steps:-
+### **Experiment - 5: Flow Control Protocols**
 
-1. Sense channel
-2. If idle → Wait (IFS time)
-3. Send RTS (Request to Send)
-4. Receive CTS (Clear to Send)
-5. Transmit data
-6. Receive ACK
-7. If no ACK → Retransmit
+Steps:
+1. Create sender and receiver network  
+2. Assign IP addresses  
+3. Simulate Stop & Wait protocol  
+4. Observe ACK after each frame  
+5. Simulate Go-Back-N ARQ  
+6. Send multiple frames  
+7. Introduce error  
+8. Observe retransmission  
+9. Simulate Selective Repeat ARQ  
+10. Compare performance  
 
-CSMA/CD is a network protocol used in wired Ethernet LANs to control how devices share a communication channel.
+---
 
-Steps:-
-1. Sense the channel – Device checks if medium is idle
-2. If idle → Transmit data
-3. If busy → Wait
-4. During transmission → Detect collision
-5. If collision occurs → Send jam signal
-6. Stop transmission
-7. Wait (Backoff time)
-8. Retransmit
+### **Experiment - 6: Multiple Access Protocols**
 
+#### **CSMA/CD**
 
+Steps:
+1. Sense channel  
+2. If idle → transmit  
+3. If busy → wait  
+4. Detect collision  
+5. Send jam signal  
+6. Stop transmission  
+7. Wait backoff time  
+8. Retransmit  
 
-**Experiment - 7**
+#### **CSMA/CA**
 
-Create a simulation to demonstrate logical addressing using IPv4 and IPv6. Implement address mapping techniques such as ARP and DHCP to show how devices acquire and resolve network addresses.
+Steps:
+1. Sense channel  
+2. If idle → wait IFS  
+3. Send RTS  
+4. Receive CTS  
+5. Transmit data  
+6. Receive ACK  
+7. If no ACK → retransmit  
 
-**ARP**
+---
 
-ARP is used to map an IP address to its corresponding MAC address in a local network.
+### **Experiment - 7: Sliding Window Protocol**
 
-STEPS:-
+Steps:
+1. Create network with 2 PCs  
+2. Assign IP addresses  
+3. Send multiple frames  
+4. Observe sliding window  
+5. Track sequence numbers  
+6. Implement piggybacking  
+7. Observe ACK inside frames  
+8. Use simulation mode  
+9. Analyze performance  
+10. Conclude efficiency  
 
-1. Create a network with one switch and multiple PCs.
-2. Connect PCs using straight-through cables.
-3. Assign IP addresses in the same subnet (e.g., 192.168.1.x).
-4. Switch to Simulation Mode.
-5. Send a PDU from source PC to destination PC.
-6. Observe ARP request broadcast in the network.
-7. Observe ARP reply from destination PC with MAC address.
-8. Open packet details to verify IP–MAC mapping.
-9. Continue simulation to complete ICMP communication.
-10. Verify ARP resolution in the process.
+---
 
-**DHCP**
+### **Experiment - 8: Logical Addressing (IPv4, IPv6, ARP, DHCP, BOOTP, RARP)**
 
-DHCP is used to automatically assign IP address, subnet mask, gateway, and DNS to devices in a network.
+Steps:
+1. Create network with PCs and server  
+2. Assign IPv4 and IPv6 addresses  
+3. Simulate ARP (IP → MAC)  
+4. Observe ARP request/reply  
+5. Enable DHCP on server  
+6. Configure DHCP pool  
+7. Assign automatic IPs  
+8. Simulate BOOTP and RARP  
+9. Test connectivity  
+10. Analyze mapping  
 
-STEPS:-
+---
 
-1.Create a network with one server, one switch, and multiple PCs.
-2. Connect server and PCs to the switch using straight-through cables.
-3. Assign a static IP to the server (e.g., 10.0.0.1).
-4. Open server → Services → DHCP and turn DHCP service ON.
-5. Create a DHCP pool and set network (10.0.0.0) with subnet mask.
-6. Configure default gateway (e.g., 10.0.0.1) and DNS server.
-7. Set starting IP range (e.g., 10.0.0.2 onwards).
-8. Save the DHCP configuration.
-9. Set all PCs to DHCP mode in IP configuration.
-10. Verify PCs receive IP addresses automatically and test using ping.
+### **Experiment - 9: Transport Layer (UDP, TCP, SCTP)**
 
-**Experiment - 9**
+Steps:
+1. Create network  
+2. Assign IP addresses  
+3. Simulate UDP communication  
+4. Simulate TCP communication  
+5. Simulate SCTP  
+6. Observe connection setup  
+7. Compare reliability  
+8. Analyze congestion control  
+9. Test using ping  
+10. Record observations  
 
-Implement a transport layer simulation to demonstrate process-to-process   communication using UDP, TCP, and SCTP. Compare the protocols in terms of connection establishment, data transmission, and congestion control.
+---
 
-Steps:-
+### **Experiment - 10: DNS & DDNS**
 
-Here are **one-line steps for RIP practical**:
+Steps:
+1. Create DNS server and PCs  
+2. Assign IP addresses  
+3. Enable DNS service  
+4. Add domain records  
+5. Configure DNS on client  
+6. Query using browser  
+7. Observe resolution  
+8. Update DNS record  
+9. Verify changes  
+10. Analyze dynamic update  
 
-1. Assign IP addresses to all router interfaces.
-2. Configure IP and default gateway on all PCs.
-3. Enable router interfaces using `no shutdown`.
-4. Start RIP using `router rip` command.
-5. Set RIP version using `version 2`.
-6. Disable auto summarization using `no auto-summary`.
-7. Add all connected networks using `network` command.
-8. Repeat RIP configuration on all routers.
-9. Verify routing table using `show ip route`.
-10. Test connectivity using `ping` between PCs.
+---
 
+### **Experiment - 11: HTTP & Web Server**
 
-**Experiment - 10**
+Steps:
+1. Create network with server and PCs  
+2. Assign IP addresses  
+3. Enable HTTP service  
+4. Create HTML webpage  
+5. Open browser on PC  
+6. Enter server IP  
+7. Load webpage  
+8. Use simulation mode  
+9. Observe HTTP GET request  
+10. Analyze response  
 
-Implement a DNS and DDNS simulation to demonstrate domain name resolution and dynamic updates. Create a simple client-server application that queries and updates the DNS records.
+---
 
-What is DNS?
+## ✅ Conclusion
 
-DNS is a system that converts domain names into IP addresses for communication over the internet.
+All experiments were successfully implemented using Cisco Packet Tracer.  
+Various networking concepts including switching, routing, protocols, and simulations were studied and analyzed effectively.
 
-Steps:-
-
-1. Create a DNS server using sockets to store domain–IP mappings.
-2. Start the server and listen for incoming client connections.
-3. Design a client program to send requests to the server.
-4. Send a QUERY request to resolve a domain name to an IP address.
-5. Server processes the request and returns the corresponding IP.
-6. Send an UPDATE request to add or modify DNS records dynamically.
-7. Server updates the record in its database/dictionary.
-8. Display the server response on the client side.
-9. Repeat requests to demonstrate real-time DNS resolution and updates.
-
-Practical Steps:-
-
-1. Assign IP address to PC0 → 192.168.1.10
-2. Assign IP to DNS Server → 192.168.1.100
-3. Assign IP to Web Server → 192.168.1.200
-4. On PC0, set DNS Server IP = 192.168.1.100
-5. Open DNS Server → Services → DNS → Turn ON
-6. Add DNS record:
-Name: www.krmu.edu
-Address: 192.168.1.200
-7. On Web Server → Services → HTTP → Turn ON
-8. Go to PC0 → Desktop → Web Browser
-Enter URL: www.krmu.edu
-9. DNS resolves domain → connects to Web Server → webpage loads
+---
