@@ -1,7 +1,8 @@
 # ENCS352 – Computer Networks Lab
-## Assignment 1: Basic Network Topologies Using Switches and Hubs
 
-## Student Details
+---
+
+## 👨‍🎓 Submitted By
 
 - **Name:** Kirti  
 - **Roll No.:** 2301010165  
@@ -10,6 +11,8 @@
 - **Date:** 05 May 2026  
 
 ---
+
+## Assignment 1: Basic Network Topologies Using Switches and Hubs
 
 ## 📁 Submission Files
 

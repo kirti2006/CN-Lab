@@ -2,7 +2,7 @@
 
 ---
 
-## Student Details
+## 👨‍🎓 Submitted By
 
 - **Name:** Kirti  
 - **Roll No.:** 2301010165  
