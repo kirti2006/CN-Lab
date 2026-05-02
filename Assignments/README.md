@@ -2,15 +2,17 @@
 
 ---
 
-**Name:** KIRTI
-**Roll No.:** 2301010165
-**Programme:** B.Tech Computer Science & Engineering
-**Section:** C
-**Date:** 05 May 2026
+## Student Details
+
+- **Name:** Kirti  
+- **Roll No.:** 2301010165  
+- **Programme:** B.Tech Computer Science & Engineering  
+- **Section:** C  
+- **Date:** 05 May 2026  
 
 ---
 
-Lab Assignments
+## Lab Assignments
 
 **Experiment - 1**
 
