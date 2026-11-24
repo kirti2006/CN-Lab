@@ -1,4 +1,4 @@
-# ENCS352 – Computer Networks lab
+# ENCS352 – Computer Networks Lab
 
 ---
 
